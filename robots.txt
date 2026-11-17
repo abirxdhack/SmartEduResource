@@ -1,0 +1,9 @@
+#copyright@abirxdhack
+#git profile https://github.com/abirxdhack
+#repo url https://github.com/abirxdhack/SmartEduResource
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /storage/
+Allow: /
+Sitemap: https://abirthetech.serv00.net/sitemap.xml

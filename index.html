@@ -1,0 +1,52 @@
+<!doctype html>
+<!--
+ copyright@abirxdhack
+ git profile https://github.com/abirxdhack
+ repo url https://github.com/abirxdhack/SmartEduResource
+-->
+<html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Smart Educational Resource — Knowledge, Organized. Learning, Unlimited.</title><meta name="description" content="Smart Educational Resource — discover, read, download and share educational PDFs from one fast, organized digital library.">
+<meta property="og:title" content="Smart Educational Resource"><meta property="og:description" content="Knowledge, Organized. Learning, Unlimited. Read, download and share study PDFs for free."><meta property="og:type" content="website"><meta property="og:image" content="assets/images/social-preview.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"><meta name="theme-color" content="#06141a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Dancing+Script:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/app.css?v=4"><script src="assets/js/theme.js?v=4"></script></head>
+<body data-root=""><a class="skip" href="#main">Skip to content</a><div id="site-header"></div>
+<main id="main">
+<section class="hero" id="home"><div class="grid-bg"></div><div class="wrap hero-grid">
+  <div style="min-width:0"><span class="live-pill rv" style="--i:0"><span class="d"></span>Free · Fast · Powered by Google Drive</span>
+  <p class="hello rv" style="--i:1">Welcome to</p>
+  <h1 class="rv" style="--i:1">Smart <span class="ac">Educational</span> Resource</h1>
+  <p class="sub rv" style="--i:2">Read · Download · Share</p>
+  <p class="quote rv" style="--i:2">Knowledge, organized. Learning, unlimited — every study PDF you need, one search away.</p>
+  <form class="search rv" id="heroSearch" style="--i:3" role="search"><span id="si"></span><input type="search" name="q" placeholder="Search books, notes, tests…" aria-label="Search resources"><button class="btn btn-solid" type="submit">Search</button></form>
+  <div class="hero-cta rv" style="--i:4"><a class="btn btn-line" href="#library">Browse Library</a><a class="btn btn-ghost" href="#categories">Explore Categories</a></div></div>
+  <div class="stack rv" style="--i:3" id="stack" aria-hidden="true"></div></div></section>
+<div class="strip"><div class="row" id="strip"></div></div>
+<section class="sec showcase" id="showcase" hidden><div class="wrap">
+  <div class="sec-head"><div><p class="kicker">Now showing</p><h2 class="h2">Books <em>on the move</em></h2><p class="lead">Spotlight picks and the whole shelf, rolling by. Tap any book to read, download or share it.</p></div>
+    <div class="sc-tools"><div class="search" role="search"><span id="sqi"></span><input id="sq" type="search" placeholder="Search the books…" autocomplete="off" aria-label="Search the books"></div></div></div>
+  <div class="spot" id="spot" role="region" aria-roledescription="carousel" aria-label="Featured books"><div class="spot-bar"></div><div class="spot-track" id="spotTrack"></div>
+    <div class="spot-ctl" id="spotCtl"><div class="dots" id="spotDots"></div><div class="arrows"><button class="ibtn" id="spotPrev" type="button" aria-label="Previous book"></button><button class="ibtn" id="spotNext" type="button" aria-label="Next book"></button></div></div></div>
+  <div class="rail-wrap" id="railWrap"><div class="rail-head"><h3><i class="live-dot"></i><span id="railTitle">Now running</span></h3><div class="arrows" id="railArrows"><button class="ibtn" id="railPrev" type="button" aria-label="Scroll books left"></button><button class="ibtn" id="railNext" type="button" aria-label="Scroll books right"></button></div></div><div class="rail" id="rail" tabindex="0" aria-label="All books — scrolls automatically, swipe or use the arrows to browse"></div></div>
+  <div class="no-match" id="scNote" hidden>No book matches <b></b> in the showcase. <button id="scAll" type="button">Search the whole library →</button></div></div></section>
+<section class="sec" id="numbers"><div class="wrap"><div class="sec-head"><div><p class="kicker">By the numbers</p><h2 class="h2">A library that <em>keeps growing</em></h2></div></div><div class="counters" id="counters"></div></div></section>
+<section class="sec" id="secFeatured" hidden><div class="wrap"><div class="sec-head"><div><p class="kicker">Hand-picked</p><h2 class="h2">Featured <em>resources</em></h2></div></div><div class="shelf" id="shelf"></div></div></section>
+<section class="sec" id="library"><div class="wrap">
+  <div class="sec-head"><div><p class="kicker">The library</p><h2 class="h2">Find the <em>right PDF</em> in seconds</h2></div><p class="lead" style="margin:0">Search, filter by class, subject, board and year, then read instantly in your browser.</p></div>
+  <div class="tools"><div class="tools-row"><div class="search" style="margin:0"><span id="si2"></span><input type="search" id="q" placeholder="Search the library…" aria-label="Search"></div>
+    <select class="sel" id="fSubject" aria-label="Subject"></select><select class="sel" id="fClass" aria-label="Class"></select><select class="sel" id="fBoard" aria-label="Board"></select><select class="sel" id="fYear" aria-label="Academic year"></select><select class="sel" id="fType" aria-label="Resource type"></select>
+    <select class="sel" id="fSort" aria-label="Sort"><option value="newest">Newest</option><option value="popular">Most popular</option><option value="downloads">Most downloaded</option><option value="oldest">Oldest</option><option value="title">Title A–Z</option></select></div>
+    <div class="chips" id="chips" role="group" aria-label="Categories"></div></div>
+  <div class="count"><span id="count">Loading…</span><button id="reset" hidden>Clear filters</button></div>
+  <div class="grid" id="grid"></div><div id="pager"></div></div></section>
+<section class="sec" id="recentlyViewed" hidden><div class="wrap"><p class="kicker">Pick up where you left off</p><h2 class="h2">Recently <em>viewed</em></h2><div class="pills" id="rvp"></div></div></section>
+<section class="sec" id="secRecent" hidden><div class="wrap"><div class="sec-head"><div><p class="kicker">Fresh</p><h2 class="h2">Recently <em>uploaded</em></h2></div></div><div class="grid" id="gRecent"></div></div></section>
+<section class="sec" id="secPopular" hidden><div class="wrap"><div class="sec-head"><div><p class="kicker">Trending</p><h2 class="h2">Popular <em>downloads</em></h2></div></div><div class="grid" id="gPopular"></div></div></section>
+<section class="sec" id="categories"><div class="wrap"><div class="sec-head"><div><p class="kicker">Browse</p><h2 class="h2">Explore by <em>category</em></h2></div></div><div class="tiles" id="tiles"></div></div></section>
+<section class="sec" id="subjects" hidden><div class="wrap"><p class="kicker">Browse</p><h2 class="h2">Explore by <em>subject</em></h2><div class="pills" id="subjPills" style="margin-top:1.5rem"></div></div></section>
+<section class="sec"><div class="wrap split"><div><p class="kicker rv">About</p><h2 class="h2 rv">A digital academic library, <em>carefully organized.</em></h2><p class="lead rv">Smart Educational Resource gathers textbooks, notes, question banks and model tests in one place — classified by class, subject, board and year — so learners can find, read and share the right PDF without friction.</p><p style="margin-top:1.5rem" class="rv"><a class="btn btn-line" href="about.html">Learn more</a></p></div>
+  <div class="why"><div class="rv"><i data-ico="book"></i><b>Read instantly</b><p>Open any PDF in the built-in reader — no download required.</p></div><div class="rv"><i data-ico="layers"></i><b>Organized</b><p>Filter by class, subject, board, year and type.</p></div><div class="rv"><i data-ico="link"></i><b>Shareable</b><p>Every resource has its own link with a cover preview for WhatsApp and Facebook.</p></div><div class="rv"><i data-ico="phone"></i><b>Mobile-first</b><p>Comfortable on phones, tablets and desktops.</p></div></div></div></section>
+<section class="sec" style="border-bottom:0"><div class="wrap"><div class="cta-band rv"><p class="kicker">Start learning</p><h2 class="h2">Your next study resource is <em>one search away.</em></h2><p class="lead">Browse the full library — free to read, easy to share.</p><a class="btn btn-solid" href="#library">Browse the library</a></div></div></section>
+</main><div id="site-footer"></div>
+<script src="assets/js/common.js?v=4"></script><script src="assets/js/showcase.js?v=4"></script><script src="assets/js/app.js?v=4"></script></body></html>

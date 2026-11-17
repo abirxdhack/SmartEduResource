@@ -1,0 +1,22 @@
+<!doctype html>
+<!--
+ copyright@abirxdhack
+ git profile https://github.com/abirxdhack
+ repo url https://github.com/abirxdhack/SmartEduResource
+-->
+<html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact · Smart Educational Resource</title><meta name="description" content="Discover, explore, read, and download educational resources from one organized digital library.">
+<meta property="og:title" content="Contact · Smart Educational Resource"><meta property="og:type" content="website"><meta property="og:image" content="assets/images/social-preview.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"><meta name="theme-color" content="#06141a">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Dancing+Script:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/app.css?v=4"><script src="assets/js/theme.js?v=4"></script></head>
+<body data-root=""><div id="site-header"></div><main id="main">
+<section class="page-hero wrap"><span class="eyebrow rv">Contact</span><h1 class="h2 rv" style="font-size:clamp(2.4rem,6vw,4.4rem)">Get in <em>touch.</em></h1><p class="lead rv">Suggestions, corrections or copyright concerns? Send a message.</p></section>
+<section class="sec" style="padding-top:2rem"><div class="wrap" style="max-width:42rem"><div class="alert ok" id="ok" hidden>Thank you — your message has been received.</div>
+<form id="cf" class="form-grid"><div class="field"><label class="req" for="name">Name</label><input id="name" name="name" required maxlength="120"></div><div class="field"><label class="req" for="email">Email</label><input id="email" name="email" type="email" required></div>
+<div class="field full"><label class="req" for="message">Message</label><textarea id="message" name="message" rows="6" required minlength="10" maxlength="4000"></textarea></div><input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><div class="full"><button class="btn btn-solid" type="submit">Send message</button></div></form></div></section>
+</main><div id="site-footer"></div><script src="assets/js/common.js?v=4"></script><script>
+document.getElementById("cf").addEventListener("submit",async function(e){e.preventDefault();var f=e.target,b=f.querySelector("button");b.disabled=true;
+try{var r=await fetch("api.php?action=contact",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:f.name.value,email:f.email.value,message:f.message.value,website:f.website.value})});var d=await r.json();
+if(d.ok){f.reset();document.getElementById("ok").hidden=false;f.hidden=true}else{A360.toast(d.error||"Could not send.","err")}}catch(x){A360.toast("Could not send. Please try again later.","err")}b.disabled=false});</script></body></html>

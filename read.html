@@ -1,0 +1,31 @@
+<!doctype html>
+<!--
+ copyright@abirxdhack
+ git profile https://github.com/abirxdhack
+ repo url https://github.com/abirxdhack/SmartEduResource
+-->
+<html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reader · Smart Educational Resource</title><link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg"><meta name="theme-color" content="#06141a">
+<link rel="preconnect" href="https://drive.google.com"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Dancing+Script:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/app.css?v=4"><link rel="stylesheet" href="assets/css/reader.css?v=4"><script src="assets/js/theme.js?v=4"></script></head>
+<body class="reader-page" data-root="">
+<div class="rd" id="readerRoot">
+  <header class="rd-top"><a class="ibtn" href="index.html#library" aria-label="Back to library" title="Back to library" data-ico="left"></a>
+    <a class="rd-brand" href="index.html" aria-label="Smart Educational Resource home"><span class="nm">Smart Educational Resource</span><span class="dot">.</span></a>
+    <div class="rd-ttl"><h1 id="rdTitle">Loading…</h1><small id="rdSub"></small></div>
+    <div class="rd-actions"><button class="btn btn-ghost btn-sm" type="button" id="shareBtn"><span data-ico="share"></span><span class="lbl">Share</span></button><a class="btn btn-solid btn-sm" id="dlBtn" hidden rel="noopener"><span data-ico="download"></span><span class="lbl">Download</span></a>
+      <a class="ibtn" id="openBtn" hidden target="_blank" rel="noopener" aria-label="Open in Google Drive" title="Open in Google Drive" data-ico="ext"></a><div data-theme-menu></div><button class="ibtn" type="button" id="infoToggle" aria-label="Document details" aria-expanded="false" data-ico="info"></button></div></header>
+  <div class="rd-body"><section class="rd-main" aria-label="PDF reader">
+    <div class="rd-tools" id="tools" hidden role="toolbar" aria-label="Reader controls"><div class="seg" id="modeSeg" role="tablist" aria-label="Reader mode"><button type="button" role="tab" data-m="google" class="on">Google viewer</button><button type="button" role="tab" data-m="smart" id="smartTab" hidden>Smart reader</button></div>
+      <div class="pdfjs-ctl" id="pdfCtl" hidden><button class="tb" id="prevPage" aria-label="Previous page" data-ico="left"></button><span class="pgbox"><input id="pageNum" type="number" min="1" value="1" aria-label="Current page"> / <span id="pageCount">–</span></span><button class="tb" id="nextPage" aria-label="Next page" data-ico="right"></button><span class="sep"></span>
+      <button class="tb" id="zoomOut" aria-label="Zoom out" data-ico="minus"></button><span id="zoomLabel" class="zl">Fit</span><button class="tb" id="zoomIn" aria-label="Zoom in" data-ico="plus"></button><button class="tb tb-text" id="fitWidth">FIT WIDTH</button></div>
+      <button class="tb" id="fullscreen" aria-label="Fullscreen" data-ico="full"></button></div>
+    <div class="rd-stage" id="stage"><div class="rd-state" id="state"><div class="spinner"></div><p id="stateMsg">Opening document…</p><div class="bar" id="bar" hidden><i></i></div></div>
+      <iframe id="gv" title="PDF document" allow="fullscreen" referrerpolicy="no-referrer" hidden></iframe>
+      <div class="rd-scroll" id="scroller" tabindex="0" hidden><div id="pages" class="pages"></div></div>
+      <div class="slow" id="slow" hidden><span data-ico="info"></span><p>Taking a while? You can open the file in Google Drive or download it.</p><a class="btn btn-ghost btn-sm" id="slowOpen" target="_blank" rel="noopener">Open in Drive</a></div></div></section>
+    <aside class="rd-side" id="side" aria-label="Document information"><div id="sideBody"></div></aside></div>
+</div>
+<noscript><p style="padding:2rem">Please enable JavaScript to read documents.</p></noscript>
+<script src="assets/js/common.js?v=4"></script><script src="assets/js/reader.js?v=4"></script></body></html>
