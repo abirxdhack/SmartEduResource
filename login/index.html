@@ -1,0 +1,25 @@
+<!doctype html>
+<!--
+ copyright@abirxdhack
+ git profile https://github.com/abirxdhack
+ repo url https://github.com/abirxdhack/SmartEduResource
+-->
+<html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Admin login · Smart Educational Resource</title><link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Dancing+Script:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/app.css?v=4"><script src="../assets/js/theme.js?v=4"></script><script src="../assets/js/auth.js?v=4"></script>
+<script>if (localStorage.getItem('a360-token')) location.replace('../admin/');</script></head>
+<body data-root="../"><main class="auth"><form class="auth-card" id="lf" autocomplete="on">
+  <div style="text-align:center;margin-bottom:1.8rem"><a class="logo sm" href="../index.html"><span class="nm">Smart Educational Resource</span><span class="dot">.</span><small>Admin login</small></a><p class="eyebrow" style="margin-top:1rem">Admin sign in</p></div>
+  <div class="alert err" id="err" role="alert" hidden></div>
+  <div class="field"><label for="u">Username</label><input id="u" name="username" required autocomplete="username" autofocus></div>
+  <div class="field"><label for="p">Password</label><input id="p" name="password" type="password" required autocomplete="current-password"></div>
+  <button class="btn btn-solid" style="width:100%" type="submit">Sign in</button>
+  <p style="text-align:center;margin:1.2rem 0 0"><a class="small dim" href="../index.html">← Back to site</a></p></form></main>
+<script>
+document.getElementById('lf').addEventListener('submit', async function (e) {
+  e.preventDefault(); const b = this.querySelector('button'), er = document.getElementById('err'); b.disabled = true; b.textContent = 'Signing in…'; er.hidden = true;
+  try { await A360Auth.login(this.username.value, this.password.value); location.replace('../admin/'); }
+  catch (x) { er.textContent = x.message; er.hidden = false; b.disabled = false; b.textContent = 'Sign in'; }
+});
+</script></body></html>
