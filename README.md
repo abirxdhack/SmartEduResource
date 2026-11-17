@@ -110,16 +110,16 @@ After editing any CSS or JS file, change `?v=4` to `?v=5` in the HTML files so v
 
 ```text
 .
-â”œâ”€â”€ index.html          Homepage
-â”œâ”€â”€ read.html           PDF reader
-â”œâ”€â”€ about.html  contact.html  privacy.html  terms.html  404.html
-â”œâ”€â”€ api.php             Backend (one small file)
-â”œâ”€â”€ admin/  login/      Admin panel and login
-â”œâ”€â”€ assets/             css, js, images, icons
-â”œâ”€â”€ data/               Public library data (auto-generated)
-â”œâ”€â”€ covers/             Uploaded thumbnails
-â”œâ”€â”€ r/                  Share pages with previews (auto-generated)
-â””â”€â”€ storage/            Private database. Back this up and never delete it.
+index.html          Homepage
+read.html           PDF reader
+about.html  contact.html  privacy.html  terms.html  404.html
+api.php             Backend (one small file)
+admin/  login/      Admin panel and login
+assets/             css, js, images, icons
+data/               Public library data (auto-generated)
+covers/             Uploaded thumbnails
+r/                  Share pages with previews (auto-generated)
+storage/            Private database. Back this up and never delete it.
 ```
 
 ## Troubleshooting
